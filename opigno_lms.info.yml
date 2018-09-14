@@ -23,6 +23,7 @@ dependencies:
   - datetime
   - datetime_range
   - dblog
+  - dropzonejs
   - dynamic_page_cache
   - editor
   - embed
@@ -46,9 +47,12 @@ dependencies:
   - image
   - inline_entity_form
   - link
+  - mailsystem
+  - masquerade
   - media
   - media_entity_browser
   - menu_ui
+  - mimemail
   - multiselect
   - node
   - opigno_calendar
@@ -92,6 +96,7 @@ dependencies:
   - quickedit
   - rdf
   - search
+  - search_api
   - shortcut
   - state_machine
   - system
