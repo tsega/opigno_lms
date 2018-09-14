@@ -26,6 +26,10 @@ projects[opigno_class][type] = module
 projects[opigno_class][subdir] = "opigno"
 projects[opigno_class][version] = 1.0-beta1
 
+projects[opigno_commerce][type] = module
+projects[opigno_commerce][subdir] = "opigno"
+projects[opigno_commerce][version] = ""
+
 projects[opigno_course][type] = module
 projects[opigno_course][subdir] = "opigno"
 projects[opigno_course][version] = 1.0-beta1
