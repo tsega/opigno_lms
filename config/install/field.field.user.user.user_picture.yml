@@ -20,6 +20,8 @@ settings:
   file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: 3MB
+  max_resolution: 220x220
+  min_resolution: ''
   default_image:
     uuid: null
     alt: ''
@@ -32,8 +34,4 @@ settings:
   alt_field_required: 0
   title_field: 0
   title_field_required: 0
-  max_resolution: ''
-  min_resolution: ''
-  handler: 'default:file'
 field_type: image
-

@@ -41,6 +41,13 @@ function opigno_lms_install() {
     ->set('dependencies.theme', 'bartik')
     ->save(TRUE);
 
+  // Set theme logo path.
+  $theme_path = drupal_get_path("theme", "platon");
+  $logo_path = $theme_path . "/logo.png";
+  $config->getEditable('platon.settings')
+    ->set('logo.path', $logo_path)
+    ->save(TRUE);
+
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
   $user->addRole('administrator');
