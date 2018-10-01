@@ -82,7 +82,9 @@ dependencies:
   - opigno_tincan_activities
   - opigno_tincan_activity
   - opigno_tincan_api
+  - opigno_tincan_badges
   - opigno_tincan_courses
+  - opigno_tincan_ilt
   - opigno_tincan_learning_path
   - opigno_tincan_live_meeting
   - opigno_tincan_modules
