@@ -238,14 +238,12 @@ libraries[dompdf][download][type] = git
 libraries[dompdf][download][url] = https://github.com/dompdf/dompdf.git
 libraries[dompdf][download][download][branch] = master
 libraries[dompdf][download][download][download][revision] = 2e643732cdb61fb09f867a15f2ae4e224503d1b0
-libraries[dompdf][destination] = libraries
 
 libraries[dropzone][type] = library
 libraries[dropzone][download][type] = git
 libraries[dropzone][download][url] = https://github.com/enyo/dropzone.git
 libraries[dropzone][download][branch] = v5.5.0
 libraries[dropzone][download][revision] = 08b9e0a763b54a685404dea523a9c54242fbe1b9
-libraries[dropzone][destination] = libraries
 
 ; Themes ========================================
 
