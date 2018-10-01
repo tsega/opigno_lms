@@ -25,6 +25,8 @@ visibility:
   user_role:
     id: user_role
     roles:
+      user_manager: user_manager
+      content_manager: content_manager
       administrator: administrator
     negate: false
     context_mapping:

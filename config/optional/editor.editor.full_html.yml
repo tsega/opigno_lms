@@ -50,6 +50,8 @@ settings:
   plugins:
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public

@@ -26,6 +26,10 @@ projects[opigno_class][type] = module
 projects[opigno_class][subdir] = "opigno"
 projects[opigno_class][version] = 1.0-beta1
 
+projects[opigno_commerce][type] = module
+projects[opigno_commerce][subdir] = "opigno"
+projects[opigno_commerce][version] = ""
+
 projects[opigno_course][type] = module
 projects[opigno_course][subdir] = "opigno"
 projects[opigno_course][version] = 1.0-beta1
@@ -162,7 +166,7 @@ projects[calendar][patch][2901594] = "https://www.drupal.org/files/issues/week-w
 projects[calendar][patch][2955351] = "https://www.drupal.org/files/issues/2018-04-23/2955351-5-base-filter.patch"
 
 projects[entity_print][type] = module
-projects[entity_print][version] = 2.1
+projects[entity_print][version] = 2.0
 projects[entity_print][subdir] = contrib
 projects[entity_print][patch][2969184] = "https://www.drupal.org/files/issues/2018-05-03/entity_print-dompdf-2969184.patch"
 
@@ -224,8 +228,11 @@ projects[search_api][version] = 1.9
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0-alpha3
 
-projects[masquerade][type] = module
-projects[masquerade][version] = 2.0-beta
+projects[message][type] = module
+projects[message][version] = 1.0-rc2
+
+projects[message_notify][type] = module
+projects[message_notify][version] = 1.0-beta1
 
 ; Libraries ========================================
 
