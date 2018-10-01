@@ -179,8 +179,6 @@ projects[group][patch][2973005] = "https://www.drupal.org/files/issues/2018-05-1
 projects[popup_field_group][type] = module
 projects[popup_field_group][version] = 1.3
 projects[popup_field_group][subdir] = contrib
-projects[popup_field_group][patch][2965624] = "https://www.drupal.org/files/issues/2018-04-24/popup_field_group-form_submit-2965624-2.patch"
-projects[popup_field_group][patch][2971021] = "https://www.drupal.org/files/issues/2018-05-07/popup_field_group-link_query-2971021-2.patch"
 
 projects[video][type] = module
 projects[video][version] = 1.2
