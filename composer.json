@@ -1,12 +1,74 @@
 {
-	"name": "opigno/opigno_lms",
-	"description": "Opigno LMS profile",
-	"type": "drupal-profile",
-	"license": "GPL-2.0-or-later",
+	"name": 		"opigno/opigno_lms",
+	"description": 	"Opigno LMS profile",
+	"type": 		"drupal-profile",
+	"license": 		"GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "",
 			"role": ""
 		}
-	]
+	],
+    "repositories": [
+	    {
+	        "type": "composer",
+	        "url":  "https://packages.drupal.org/8"
+	    }
+	],
+    "require": {
+        "drupal/opigno_calendar": 		"1.0-rc1",
+        "drupal/opigno_calendar_event": "1.0-rc1",
+        "drupal/opigno_catalog": 		"1.0-rc1",
+        "drupal/opigno_certificate": 	"1.0-rc1",
+        "drupal/opigno_class": 			"1.0-rc1",
+        "drupal/opigno_course": 		"1.0-rc1",
+        "drupal/opigno_commerce": 		"1.0-rc1",
+        "drupal/opigno_dashboard": 		"1.0-rc1",
+        "drupal/opigno_forum": 			"1.0-rc1",
+        "drupal/opigno_group_manager": 	"1.0-rc1",
+        "drupal/opigno_ilt": 			"1.0-rc1",
+        "drupal/opigno_learning_path": 	"1.0-rc1",
+        "drupal/opigno_messaging": 		"1.0-rc1",
+        "drupal/opigno_module": 		"1.0-rc1",
+        "drupal/opigno_moxtra": 		"1.0-rc1",
+        "drupal/opigno_notification": 	"1.0-rc1",
+        "drupal/opigno_scorm": 			"1.0-rc1",
+        "drupal/opigno_search": 		"1.0-rc1",
+        "drupal/opigno_statistics": 	"1.0-rc1",
+        "drupal/opigno_tincan_api": 	"1.0-rc1",
+        "drupal/tft": 					"1.0-rc1",
+        "drupal/platon": 				"1.0-rc1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": 					["type:drupal-core"],
+            "web/libraries/{$name}": 		["type:drupal-library"],
+            "web/modules/contrib/{$name}": 	["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": 	["type:drupal-theme"],
+            "drush/Commands/{$name}": 		["type:drupal-drush"]
+        }
+    }
 }
+
