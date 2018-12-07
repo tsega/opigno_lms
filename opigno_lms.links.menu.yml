@@ -34,12 +34,12 @@ opigno_lms.achievements:
   weight: -6
   description: 'Achievements'
 
-opigno_lms.statistic:
-  title: Statistic
+opigno_lms.statistics:
+  title: Statistics
   route_name: opigno_statistics.dashboard
   menu_name: 'main'
   weight: -5
-  description: 'Statistic'
+  description: 'Statistics'
 
 # Opigno-admin menu
 opigno_admin.manage_dashboard:

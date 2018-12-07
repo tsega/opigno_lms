@@ -36,11 +36,6 @@ function opigno_lms_install() {
     ->set('page.front', '/node')
     ->save(TRUE);
 
-  // Set block dependencies.
-  $config->getEditable('block.block.privatemessageinbox')
-    ->set('dependencies.theme', 'bartik')
-    ->save(TRUE);
-
   // Set theme logo path.
   $theme_path = drupal_get_path("theme", "platon");
   $logo_path = $theme_path . "/logo.png";
@@ -73,4 +68,12 @@ function opigno_lms_install() {
       break;
     }
   }
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function opigno_lms_update_8001() {
+  // Install module.
+  \Drupal::service('module_installer')->install(['opigno_tour', 'opigno_alter_entity_autocomplete']);
 }

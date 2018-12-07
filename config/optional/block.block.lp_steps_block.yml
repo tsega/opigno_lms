@@ -20,6 +20,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/module/*'
+    pages: "/module/*\r\n/group/*/module/*"
     negate: false
     context_mapping: {  }

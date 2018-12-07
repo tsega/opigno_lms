@@ -25,6 +25,7 @@ visibility:
   user_role:
     id: user_role
     roles:
+      authenticated: authenticated
       user_manager: user_manager
       content_manager: content_manager
       administrator: administrator

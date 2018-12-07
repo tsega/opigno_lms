@@ -172,6 +172,9 @@ projects[opigno_messaging][version] = 1.0-rc1
 ;projects[opigno_messaging][download][url] = "https://git.drupal.org/project/opigno_messaging.git"
 ;projects[opigno_messaging][download][revision] = ae110924efc30fe13328051c627590ad4d22ad2b
 
+projects[opigno_migration][type] = module
+projects[opigno_migration][subdir] = "opigno"
+projects[opigno_migration][version] = ""
 
 projects[opigno_module][type] = module
 projects[opigno_module][subdir] = "opigno"
@@ -265,7 +268,9 @@ projects[opigno_tincan_api][version] = 1.0-rc1
 ;projects[opigno_tincan_api][download][url] = "https://git.drupal.org/project/opigno_tincan_api.git"
 ;projects[opigno_tincan_api][download][revision] = 87d4ffd9f3a2306ed18acacb88ccb61cc2fac685
 
-
+projects[opigno_tour][type] = module
+projects[opigno_tour][subdir] = "opigno"
+projects[opigno_tour][version] = ""
 
 projects[tft][type] = module
 projects[tft][subdir] = "opigno"
@@ -283,7 +288,7 @@ projects[tft][version] = 1.0-rc1
 ; Contrib modules ============================================
 
 projects[better_exposed_filters][type] = module
-projects[better_exposed_filters][version] = 3.0-alpha4
+projects[better_exposed_filters][version] = 3.0-alpha5
 projects[better_exposed_filters][subdir] = contrib
 
 projects[config_rewrite][type] = module
@@ -291,7 +296,7 @@ projects[config_rewrite][version] = 1.1
 projects[config_rewrite][subdir] = contrib
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-beta4
+projects[entity][version] = 1.0-rc1
 projects[entity][subdir] = contrib
 
 projects[field_group][type] = module
@@ -299,7 +304,7 @@ projects[field_group][version] = 1.0
 projects[field_group][subdir] = contrib
 
 projects[h5p][type] = module
-projects[h5p][version] = 1.0-rc8
+projects[h5p][version] = 1.0-rc11
 projects[h5p][subdir] = contrib
 
 projects[multiselect][type] = module
@@ -309,13 +314,14 @@ projects[multiselect][subdir] = contrib
 projects[private_message][type] = module
 projects[private_message][version] = 2.0-beta15
 projects[private_message][subdir] = contrib
+projects[private_message][patch][2961332] = "https://www.drupal.org/files/issues/2018-07-03/private-message-2961332-2.0.patch"
 
 projects[token][type] = module
-projects[token][version] = 1.4
+projects[token][version] = 1.5
 projects[token][subdir] = contrib
 
 projects[token_filter][type] = module
-projects[token_filter][version] = 1.0
+projects[token_filter][version] = 1.1
 projects[token_filter][subdir] = contrib
 
 projects[view_mode_selector][type] = module
@@ -399,7 +405,7 @@ projects[media_entity_browser][download][url] = "https://git.drupal.org/project/
 projects[media_entity_browser][download][revision] = c75921d3af90f1b6dc052cd2edf037116227acf8
 
 projects[entity_reference_revisions][type] = module
-projects[entity_reference_revisions][version] = 1.5
+projects[entity_reference_revisions][version] = 1.6
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
@@ -411,7 +417,7 @@ projects[mimemail][type] = module
 projects[mimemail][version] = 1.0-alpha2
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.9
+projects[search_api][version] = 1.10
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0-alpha3
@@ -421,6 +427,20 @@ projects[message][version] = 1.0-rc2
 
 projects[message_notify][type] = module
 projects[message_notify][version] = 1.0-beta1
+
+projects[migrate_plus][type] = module
+projects[migrate_plus][version] = 4.0
+
+projects[migrate_tools][type] = module
+projects[migrate_tools][version] = 4.0
+
+projects[pdf][type] = module
+projects[pdf][version] = 1.x-dev
+projects[pdf][subdir] = contrib
+projects[pdf][download][type] = git
+projects[pdf][download][branch] = 8.x-1.x
+projects[pdf][download][url] = "https://git.drupal.org/project/pdf.git"
+projects[pdf][download][revision] = f558259aff38080b6c89bb48c52eaa636bf46384
 
 ; Libraries ========================================
 

@@ -17,6 +17,7 @@ settings:
   label: 'Dashboard: Calendar legend'
   provider: calendar
   label_display: visible
+  calendar_legend_view_settings_view: 'opigno_calendar:month_block'
 visibility:
   request_path:
     id: request_path
