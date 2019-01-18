@@ -13,7 +13,7 @@ use Drupal\Core\Render\Markup;
  * Implements hook_preprocess_template().
  */
 function opigno_lms_preprocess_install_page(&$variables) {
-  $variables['site_version'] = '2.0';
+  $variables['site_version'] = '2.1';
 }
 
 /**
@@ -39,8 +39,12 @@ function opigno_lms_form_install_configure_form_alter(&$form, FormStateInterface
     if (empty($endpoint) || empty($username) || empty($password)) {
       $messenger->addWarning(t(
         'Please configure the LRS connection in the @setting_page.',
-        ['@setting_page' => Link::createFromRoute('settings page', 'opigno_tincan_api.settings_form')->toString()]
+        [
+          '@setting_page' => Link::createFromRoute('settings page', 'opigno_tincan_api.settings_form')
+            ->toString()
+        ]
       ));
+      return;
     }
   }
 
@@ -52,3 +56,53 @@ function opigno_lms_form_install_configure_form_alter(&$form, FormStateInterface
   }
 
 }
+
+/**
+ * Implements opigno_lms_check_opigno_lms_updates().
+ *
+ * Check if new Opigno LMS release is available.
+ *
+ * Return TRUE or FALSE.
+ *
+ */
+function opigno_lms_check_opigno_lms_updates() {
+  // Get all available updates.
+  $available = update_get_available();
+
+  if (isset($available['opigno_lms'])) {
+    $all_releases = array_keys($available['opigno_lms']['releases']);
+    $last_release = $all_releases[0];
+    $current_release = opigno_lms_get_current_opigno_lms_release();
+    $has_updates = ($last_release != $current_release);
+
+    return $has_updates;
+  }
+}
+
+/**
+ * Implements opigno_lms_get_current_opigno_lms_release().
+ *
+ * Get current Opigno LMS release version.
+ *
+ * Return string with current release version or FALSE.
+ *
+ */
+function opigno_lms_get_current_opigno_lms_release() {
+  $profile = \Drupal::installProfile();
+  if ($profile != 'opigno_lms') {
+    return FALSE;
+  };
+  $info = system_get_info('module', $profile);
+  if (!empty($info) && isset($info['version'])) {
+    if (!isset($info['version'])) {
+      \Drupal::logger('opigno_learning_path')
+        ->notice(t('Opigno LMS version is undefined!'));
+      return FALSE;
+    }
+    else {
+      return $info['version'];
+    }
+  }
+  return FALSE;
+}
+

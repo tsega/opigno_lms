@@ -6,6 +6,7 @@
  * profile.
  */
 
+use Drupal\Core\Config\FileStorage;
 use Drupal\file\Entity\File;
 use Drupal\user\Entity\User;
 
@@ -77,3 +78,21 @@ function opigno_lms_update_8001() {
   // Install module.
   \Drupal::service('module_installer')->install(['opigno_tour', 'opigno_alter_entity_autocomplete']);
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Updates Opigno Activities Bank (LP Interface) view.
+ *
+ */
+function opigno_lms_update_8002() {
+  $config_path = drupal_get_path('module', 'opigno_module')
+    . '/config/optional';
+  /* @var Drupal\Core\Config\CachedStorage $config_storage */
+  $storage = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $data = $storage->read('views.view.opigno_activities_bank_lp_interface');
+  $config_storage->write('views.view.opigno_activities_bank_lp_interface', $data);
+
+}
+

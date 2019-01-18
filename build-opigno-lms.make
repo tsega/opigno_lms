@@ -6,4 +6,4 @@ includes[] = drupal-org-core.make
 projects[opigno_lms][type] = profile
 projects[opigno_lms][download][type] = git
 projects[opigno_lms][download][branch] = 8.x-1.x
-projects[opigno_lms][download][tag] = 8.x-1.0-rc2
+projects[opigno_lms][download][tag] = 8.x-1.2
