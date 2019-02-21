@@ -393,7 +393,7 @@ projects[popup_field_group][version] = 1.3
 projects[popup_field_group][subdir] = contrib
 
 projects[video][type] = module
-projects[video][version] = 1.2
+projects[video][version] = 1.4
 projects[video][subdir] = contrib
 
 projects[embed][type] = module
