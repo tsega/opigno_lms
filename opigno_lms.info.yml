@@ -2,7 +2,7 @@ name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
 core: 8.x
-version: 8.x-1.3
+version: 8.x-1.4
 distribution:
   name: "Opigno LMS"
 dependencies:
