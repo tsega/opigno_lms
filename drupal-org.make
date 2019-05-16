@@ -110,7 +110,7 @@ projects[opigno_dashboard][version] = 1.1
 
 projects[opigno_forum][type] = module
 projects[opigno_forum][subdir] = "opigno"
-projects[opigno_forum][version] = 1.1
+projects[opigno_forum][version] = 1.3
 
 ;projects[opigno_forum][type] = module
 ;projects[opigno_forum][subdir] = "opigno"
@@ -118,7 +118,7 @@ projects[opigno_forum][version] = 1.1
 ;projects[opigno_forum][download][type] = git
 ;projects[opigno_forum][download][branch] = 8.x-1.x
 ;projects[opigno_forum][download][url] = "https://git.drupal.org/project/opigno_forum.git"
-;projects[opigno_forum][download][revision] = f49f81ac430ef79a70437fbc6351a2be09777e68
+;projects[opigno_forum][download][revision] = c74781d81df6784fc01d5164789ab82db0132b09
 
 
 projects[opigno_group_manager][type] = module
@@ -149,7 +149,7 @@ projects[opigno_ilt][version] = 1.1
 
 projects[opigno_learning_path][type] = module
 projects[opigno_learning_path][subdir] = "opigno"
-projects[opigno_learning_path][version] = 1.3
+projects[opigno_learning_path][version] = 1.4
 
 ;projects[opigno_learning_path][type] = module
 ;projects[opigno_learning_path][subdir] = "opigno"
