@@ -9,6 +9,8 @@
 use Drupal\Core\Config\FileStorage;
 use Drupal\file\Entity\File;
 use Drupal\user\Entity\User;
+use Drupal\Core\StreamWrapper\PrivateStream;
+
 
 /**
  * Implements hook_install().
@@ -69,6 +71,40 @@ function opigno_lms_install() {
       break;
     }
   }
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function opigno_lms_requirements($phase) {
+  $requirements = [];
+
+  // Test if the Private File System Path is set.
+  if ($phase == 'runtime' || $phase == 'install') {
+    $file_private_path_base_path = PrivateStream::basePath();
+
+    if ($file_private_path_base_path === NULL) {
+      $requirements['file_private_system'] = [
+        'title' => 'Private Files System',
+        'value' => t('Private file system path not set'),
+        'severity' => REQUIREMENT_ERROR,
+        'description' => t('Your uploaded files are not fully protected because you did not set a Private File Directory. 
+                          You need to set an existing local file system path for storing private files. 
+                          It should be writable by Drupal and not accessible over the web. This must be changed in settings.php. 
+                          More info: https://opigno.atlassian.net/wiki/spaces/OUM20/pages/743636993/Enable+private+file+system'
+        ),
+      ];
+    }
+    else {
+      $requirements['file_private_system'] = [
+        'title' => 'Private Files System',
+        'value' => t('Private file system path is set'),
+        'severity' => REQUIREMENT_OK,
+      ];
+    }
+  }
+
+  return $requirements;
 }
 
 /**
