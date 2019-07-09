@@ -80,7 +80,7 @@ function opigno_lms_requirements($phase) {
   $requirements = [];
 
   // Test if the Private File System Path is set.
-  if ($phase == 'runtime' || $phase == 'install') {
+  if ($phase == 'runtime') {
     $file_private_path_base_path = PrivateStream::basePath();
 
     if ($file_private_path_base_path === NULL) {
@@ -130,5 +130,25 @@ function opigno_lms_update_8002() {
   $data = $storage->read('views.view.opigno_activities_bank_lp_interface');
   $config_storage->write('views.view.opigno_activities_bank_lp_interface', $data);
 
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Update Opigno LP Steps block visibility configuration.
+ *
+ */
+function opigno_lms_update_8003() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('block.block.lp_steps_block');
+  $visibility = $config->get('visibility');
+  // Change visibility settings only if admins didn't change them.
+  if (isset($visibility['request_path']['pages'])
+    && $visibility['request_path']['pages'] == "/module/*\r\n/group/*/module/*"
+  ) {
+    $visibility['request_path']['pages'] = "/module/*/result*\r\n/group/*/module/*";
+    $config->set('visibility', $visibility);
+    $config->save(TRUE);
+  }
 }
 
