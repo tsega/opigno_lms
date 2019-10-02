@@ -1,8 +1,8 @@
 name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
-# core: 8.x
-# version: 8.x-1.6
+core: 8.x
+# version: 8.x-2.8
 distribution:
   name: "Opigno LMS"
 dependencies:
@@ -78,6 +78,7 @@ dependencies:
   - opigno_scorm
   - opigno_scorm_activity
   - opigno_search
+  - opigno_skills_system
   - opigno_statistics
   - opigno_tincan_activities
   - opigno_tincan_activity
@@ -121,8 +122,7 @@ themes:
   - platon
   - seven
 
-# Information added by Drupal.org packaging script on 2019-05-16
-version: '8.x-1.6'
-core: '8.x'
+# Information added by Drupal.org packaging script on 2019-10-02
+version: '8.x-2.8'
 project: 'opigno_lms'
-datestamp: 1558015419
+datestamp: 1570023514
