@@ -316,6 +316,11 @@ projects[better_exposed_filters][type] = module
 projects[better_exposed_filters][version] = 3.0-alpha5
 projects[better_exposed_filters][subdir] = contrib
 
+projects[ckeditor_bgimage][type] = module
+projects[ckeditor_bgimage][version] = 1.1
+projects[ckeditor_bgimage][subdir] = contrib
+projects[ckeditor_bgimage][patch][3107667] = "https://www.drupal.org/files/issues/2020-01-21/ckeditor_bgimage-opigno_certificate-3107667-2.patch"
+
 projects[config_rewrite][type] = module
 projects[config_rewrite][version] = 1.1
 projects[config_rewrite][subdir] = contrib
@@ -329,13 +334,14 @@ projects[field_group][version] = 3.0-rc1
 projects[field_group][subdir] = contrib
 
 projects[h5p][type] = module
-projects[h5p][version] = 1.0-rc16
+projects[h5p][version] = 1.0-rc17
 projects[h5p][subdir] = contrib
 projects[h5p][patch][3018798] = "https://www.drupal.org/files/issues/2019-07-09/opigno-module-h5p-hidetitle-3018798-6.patch"
 
 projects[multiselect][type] = module
 projects[multiselect][version] = 1.0
 projects[multiselect][subdir] = contrib
+projects[multiselect][patch][3009259] = "https://www.drupal.org/files/issues/2018-10-31/multiselect-javascript_settings_missing-3009259-3.patch"
 
 projects[private_message][type] = module
 projects[private_message][version] = 2.0-beta15
@@ -393,9 +399,9 @@ projects[entity_print][subdir] = contrib
 projects[entity_print][patch][2969184] = "https://www.drupal.org/files/issues/2018-05-03/entity_print-dompdf-2969184.patch"
 
 projects[group][type] = module
-projects[group][version] = 1.0-rc2
+projects[group][version] = 1.0-rc5
 projects[group][subdir] = contrib
-projects[group][patch][2736233] = "https://www.drupal.org/files/issues/2018-04-20/2736233-156.patch"
+projects[group][patch][2736233] = "https://www.drupal.org/files/issues/2019-08-23/port-subgroups-2736233-261.patch"
 projects[group][patch][2973005] = "https://www.drupal.org/files/issues/2018-05-15/group-2973005-2.patch"
 
 projects[popup_field_group][type] = module
@@ -418,6 +424,7 @@ projects[entity_embed][subdir] = contrib
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.6
 projects[entity_browser][subdir] = contrib
+projects[entity_browser][patch][3087176] = "https://www.drupal.org/files/issues/2020-01-17/entity_browser-opigno_paginagion_view-3087176-4.patch"
 
 projects[ctools][type] = module
 projects[ctools][version] = 3.2
