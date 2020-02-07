@@ -40,7 +40,7 @@ function opigno_lms_form_install_configure_form_alter(&$form, FormStateInterface
   $messenger = \Drupal::messenger();
 
   // Check if Tincan PHP library is installed.
-  $has_library = opigno_tincan_api_tincanphp_is_installed();
+  $has_library = opigno_lms_tincanphp_is_installed();
   if (!$has_library) {
     $messenger->addWarning(Markup::create("Please install the TinCanPHP library using Composer, with the command: <em>composer require rusticisoftware/tincan:@stable</em>"));
   }
@@ -121,3 +121,9 @@ function opigno_lms_get_current_opigno_lms_release() {
   return FALSE;
 }
 
+/**
+ * Check if the library TinCanPHP is installed.
+ */
+function opigno_lms_tincanphp_is_installed() {
+  return class_exists('TinCan\Statement');
+}
