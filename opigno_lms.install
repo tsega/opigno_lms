@@ -8,6 +8,7 @@
 
 use Drupal\Core\Config\FileStorage;
 use Drupal\file\Entity\File;
+use Drupal\media\Entity\MediaType;
 use Drupal\user\Entity\User;
 use Drupal\Core\StreamWrapper\PrivateStream;
 
@@ -176,3 +177,20 @@ function opigno_lms_update_8004() {
   $config->save(TRUE);
 }
 
+/**
+ * Remove unnecessary media type 'file'.
+ */
+function opigno_lms_update_8005() {
+  try {
+    $media_type = MediaType::load('file');
+    if ($media_type) {
+      $media_type->delete();
+    }
+  }
+  catch (Exception $e) {
+    $message = t("Error removing media type 'file': ");
+    \Drupal::logger('opigno_lms')->error($message . $e->getMessage());
+    $messenger = \Drupal::messenger();
+    $messenger->addError($message . $e->getMessage());
+  }
+}
