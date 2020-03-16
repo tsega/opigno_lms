@@ -25,7 +25,7 @@
         "drupal/better_exposed_filters":        "3.0.0-alpha5",
         "drupal/ckeditor_bgimage":              "1.1",
         "drupal/config_rewrite":                "1.1",
-        "drupal/entity":                        "1.0-rc1",
+        "drupal/entity":                        "1.0",
         "drupal/field_group":                   "3.0-rc1",
         "drupal/h5p":                           "1.0-rc17",
         "drupal/multiselect":                   "1.0",
