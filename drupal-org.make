@@ -326,7 +326,7 @@ projects[config_rewrite][version] = 1.1
 projects[config_rewrite][subdir] = contrib
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-rc1
+projects[entity][version] = 1.0
 projects[entity][subdir] = contrib
 
 projects[field_group][type] = module
