@@ -124,6 +124,6 @@ themes:
   - seven
 
 # Information added by Drupal.org packaging script on 2020-03-19
-version: '8.x-2.11.1'
+version: '8.x-2.11.2'
 project: 'opigno_lms'
 datestamp: 1588158083
