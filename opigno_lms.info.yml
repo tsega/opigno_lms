@@ -125,7 +125,7 @@ themes:
   - platon
   - seven
 
-# Information added by Drupal.org packaging script on 2020-03-19
+# Information added by Drupal.org packaging script on 2020-06-02
 version: '8.x-2.12'
 project: 'opigno_lms'
-datestamp: 1588158083
+datestamp: 1591115032
