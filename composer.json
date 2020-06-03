@@ -13,18 +13,6 @@
         {
             "type": "composer",
             "url":  "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "kenwheeler/slick",
-                "version": "1.8.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-                    "type": "zip"
-                }
-            }
         }
     ],
     "require": {
@@ -67,6 +55,7 @@
         "drupal/schemata_json_schema":          "1.0.0-beta2",
         "drupal/state_machine":                 "1.0.0",
         "kenwheeler/slick":                     "1.8.1",
+        "almende/vis":                          "4.21.0",
         "drupal/search_api":                    "1.16",
         "drupal/dropzonejs":                    "2.1",
         "enyo/dropzone":                        "v5.5.0",
