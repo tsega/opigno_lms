@@ -13,31 +13,6 @@
         {
             "type": "composer",
             "url":  "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package" : {
-                "name" : "almende/vis",
-                "version" : "v4.21.0",
-                "type" : "drupal-library",
-                "source" : {
-                    "url" : "https://github.com/almende/vis.git",
-                    "type" : "git",
-                    "reference" : "v4.21.0"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "kenwheeler/slick",
-                "version": "1.8.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-                    "type": "zip"
-                }
-            }
         }
     ],
     "require": {
