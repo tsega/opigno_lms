@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "drupal/core":                          "8.8.6",
+        "drupal/core":                          "8.8.8",
         "wikimedia/composer-merge-plugin":      "^1.4",
         "webflo/drupal-finder":                 "^1.0.0",
         "webmozart/path-util":                  "^2.3",
