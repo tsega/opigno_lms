@@ -30,7 +30,7 @@
         "drupal/field_group":                   "3.0",
         "drupal/h5p":                           "1.0.0-rc17",
         "drupal/multiselect":                   "1.0",
-        "drupal/private_message":               "2.0.0-beta16",
+        "drupal/private_message":               "2.x-dev",
         "drupal/token":                         "1.7",
         "drupal/token_filter":                  "1.2",
         "drupal/views_templates":               "1.1",
