@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "drupal/core":                          "8.9.13",
+        "drupal/core":                          "8.9.14",
         "webflo/drupal-finder":                 "^1.0.0",
         "webmozart/path-util":                  "^2.3",
         "symfony/psr-http-message-bridge":      "^1.0",
@@ -139,8 +139,7 @@
             },
             "drupal/calendar": {
                 "3143737-1": "https://www.drupal.org/files/issues/2020-05-29/calendar-opigno-adaptation-3143737-1.patch",
-                "3143737-2": "https://www.drupal.org/files/issues/2020-05-29/calendar-opigno-adaptation-3143737-2.patch",
-                "3143737-3": "https://www.drupal.org/files/issues/2021-04-20/calendar-opigno-adaptation-unittests-3143737-3.patch"
+                "3143737-2": "https://www.drupal.org/files/issues/2020-05-29/calendar-opigno-adaptation-3143737-2.patch"
             },
             "drupal/config_rewrite": {
                 "3143747": "https://www.drupal.org/files/issues/2020-05-29/config_rewrite-avoid-error-on-installation-3143747.patch"

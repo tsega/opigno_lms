@@ -339,7 +339,6 @@ projects[calendar][version] = 1.0-alpha2
 projects[calendar][subdir] = contrib
 projects[calendar][patch][] = "https://www.drupal.org/files/issues/2020-05-29/calendar-opigno-adaptation-3143737-1.patch"
 projects[calendar][patch][] = "https://www.drupal.org/files/issues/2020-05-29/calendar-opigno-adaptation-3143737-2.patch"
-projects[calendar][patch][] = "https://www.drupal.org/files/issues/2021-04-20/calendar-opigno-adaptation-unittests-3143737-3.patch"
 
 projects[ckeditor_bgimage][type] = module
 projects[ckeditor_bgimage][version] = 1.1
