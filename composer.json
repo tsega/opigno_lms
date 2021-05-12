@@ -53,7 +53,7 @@
         "almende/vis":                          "4.21.0",
         "drupal/search_api":                    "1.17",
         "drupal/dropzonejs":                    "2.1",
-        "enyo/dropzone":                        "v5.9.2",
+        "bower-asset/dropzone":                 "v5.5.0",
         "drupal/message":                       "1.0",
         "drupal/message_notify":                "1.1",
         "drupal/migrate_tools":                 "5.0",
