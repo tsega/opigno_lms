@@ -359,7 +359,7 @@ projects[config_rewrite][subdir] = contrib
 projects[config_rewrite][patch][3143747] = "https://www.drupal.org/files/issues/2020-05-29/config_rewrite-avoid-error-on-installation-3143747.patch"
 
 projects[ctools][type] = module
-projects[ctools][version] = 3.4
+projects[ctools][version] = 3.6
 projects[ctools][subdir] = contrib
 
 projects[dropzonejs][type] = module
