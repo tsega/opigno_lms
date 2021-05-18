@@ -92,7 +92,8 @@
         "drupal/opigno_tincan_api": 	        "1.5.0",
         "drupal/opigno_tour": 			        "1.1.0",
         "drupal/tft": 					        "1.5.0",
-        "drupal/platon": 				        "1.8.0"
+        "drupal/platon": 				        "1.8.0",
+        "drupal/views_role_based_global_text":  "2.0"      
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -146,9 +147,6 @@
             },
             "drupal/search_api": {
                 "3110652": "https://www.drupal.org/files/issues/2020-05-21/highlight_processor_causes_theme_to_think_user_is_anonymous_3110652_5.patch"
-            },
-            "drupal/views_role_based_global_text": {
-                "3157398": "https://www.drupal.org/files/issues/2020-07-07/trying_access_array_offset_value_type_bool-3157398-01.patch"
             }
         }
     }
