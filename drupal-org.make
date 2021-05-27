@@ -46,7 +46,7 @@ projects[opigno_catalog][version] = 1.5
 
 projects[opigno_certificate][type] = module
 projects[opigno_certificate][subdir] = "opigno"
-projects[opigno_certificate][version] = 1.8
+projects[opigno_certificate][version] = 1.9
 
 ;projects[opigno_certificate][type] = module
 ;projects[opigno_certificate][subdir] = "opigno"
