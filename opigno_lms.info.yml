@@ -2,11 +2,10 @@ name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
 core: 8.x
-# version: 8.x-2.22
+# version: 8.x-2.23
 distribution:
   name: "Opigno LMS"
 dependencies:
-  - automated_cron
   - better_exposed_filters
   - block
   - block_content
@@ -40,7 +39,6 @@ dependencies:
   - field_ui
   - file
   - filter
-  - ggroup
   - group
   - h5p
   - h5peditor
