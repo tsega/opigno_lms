@@ -94,7 +94,7 @@
         "drupal/opigno_tincan_api": 	        "1.x-dev",
         "drupal/opigno_tour": 			        "1.x-dev",
         "drupal/tft": 					        "1.x-dev",
-        "drupal/platon": 				        "1.x-dev",
+        "drupal/platon": 				        "1.x-dev"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
