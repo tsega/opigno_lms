@@ -76,7 +76,7 @@
         "drupal/opigno_class": 			        "1.x-dev",
         "drupal/opigno_commerce": 		        "1.x-dev",
         "drupal/opigno_course": 		        "1.x-dev",
-        "drupal/opigno_cron": 		            "1.x-dev",
+        "drupal/opigno_cron": 		            "1.0.0",
         "drupal/opigno_dashboard": 		        "1.x-dev",
         "drupal/opigno_forum": 			        "1.x-dev",
         "drupal/opigno_group_manager": 	        "1.x-dev",
