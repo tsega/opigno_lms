@@ -161,7 +161,7 @@ projects[opigno_ilt][version] = 1.8
 
 projects[opigno_learning_path][type] = module
 projects[opigno_learning_path][subdir] = "opigno"
-projects[opigno_learning_path][version] = 1.13
+projects[opigno_learning_path][version] = 1.14
 
 ;projects[opigno_learning_path][type] = module
 ;projects[opigno_learning_path][subdir] = "opigno"
@@ -169,7 +169,7 @@ projects[opigno_learning_path][version] = 1.13
 ;projects[opigno_learning_path][download][type] = git
 ;projects[opigno_learning_path][download][branch] = 8.x-1.x
 ;projects[opigno_learning_path][download][url] = "https://git.drupal.org/project/opigno_learning_path.git"
-;projects[opigno_learning_path][download][revision] = 132b08541857067aa55320de5d5a1331bcd8182e
+;projects[opigno_learning_path][download][revision] = 2e2a2e9d9a9f25408e1a807d81360039db89c77b
 
 
 projects[opigno_messaging][type] = module
