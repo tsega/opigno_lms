@@ -2,11 +2,10 @@ name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
 core: 8.x
-# version: 8.x-2.22
+# version: 8.x-2.23
 distribution:
   name: "Opigno LMS"
 dependencies:
-  - automated_cron
   - better_exposed_filters
   - block
   - block_content
@@ -40,7 +39,6 @@ dependencies:
   - field_ui
   - file
   - filter
-  - ggroup
   - group
   - h5p
   - h5peditor
@@ -126,7 +124,7 @@ themes:
   - platon
   - seven
 
-# Information added by Drupal.org packaging script on 2021-05-27
-version: '8.x-2.22'
+# Information added by Drupal.org packaging script on 2021-06-03
+version: '8.x-2.23'
 project: 'opigno_lms'
-datestamp: 1622106211
+datestamp: 1622741471
