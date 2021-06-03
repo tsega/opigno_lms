@@ -7,7 +7,7 @@ defaults[projects][subdir] = contrib
 
 projects[opigno_calendar][type] = module
 projects[opigno_calendar][subdir] = "opigno"
-projects[opigno_calendar][version] = 1.7
+projects[opigno_calendar][version] = 1.8
 
 ;projects[opigno_calendar][type] = module
 ;projects[opigno_calendar][subdir] = "opigno"
@@ -20,7 +20,7 @@ projects[opigno_calendar][version] = 1.7
 
 projects[opigno_calendar_event][type] = module
 projects[opigno_calendar_event][subdir] = "opigno"
-projects[opigno_calendar_event][version] = 1.4
+projects[opigno_calendar_event][version] = 1.5
 
 ;projects[opigno_calendar_event][type] = module
 ;projects[opigno_calendar_event][subdir] = "opigno"
@@ -46,7 +46,7 @@ projects[opigno_catalog][version] = 1.5
 
 projects[opigno_certificate][type] = module
 projects[opigno_certificate][subdir] = "opigno"
-projects[opigno_certificate][version] = 1.9
+projects[opigno_certificate][version] = 1.10
 
 ;projects[opigno_certificate][type] = module
 ;projects[opigno_certificate][subdir] = "opigno"
@@ -59,7 +59,7 @@ projects[opigno_certificate][version] = 1.9
 
 projects[opigno_class][type] = module
 projects[opigno_class][subdir] = "opigno"
-projects[opigno_class][version] = 1.7
+projects[opigno_class][version] = 1.8
 
 ;projects[opigno_class][type] = module
 ;projects[opigno_class][subdir] = "opigno"
@@ -72,7 +72,7 @@ projects[opigno_class][version] = 1.7
 
 projects[opigno_commerce][type] = module
 projects[opigno_commerce][subdir] = "opigno"
-projects[opigno_commerce][version] = 1.3
+projects[opigno_commerce][version] = 1.4
 
 ;projects[opigno_commerce][type] = module
 ;projects[opigno_commerce][subdir] = "opigno"
@@ -85,7 +85,7 @@ projects[opigno_commerce][version] = 1.3
 
 projects[opigno_course][type] = module
 projects[opigno_course][subdir] = "opigno"
-projects[opigno_course][version] = 1.5
+projects[opigno_course][version] = 1.6
 
 ;projects[opigno_course][type] = module
 ;projects[opigno_course][subdir] = "opigno"
@@ -97,7 +97,7 @@ projects[opigno_course][version] = 1.5
 
 projects[opigno_cron][type] = module
 projects[opigno_cron][subdir] = "opigno"
-projects[opigno_cron][version] = 1.0
+projects[opigno_cron][version] = 1.1
 
 ;projects[opigno_cron][type] = module
 ;projects[opigno_cron][subdir] = "opigno"
@@ -109,7 +109,7 @@ projects[opigno_cron][version] = 1.0
 
 projects[opigno_dashboard][type] = module
 projects[opigno_dashboard][subdir] = "opigno"
-projects[opigno_dashboard][version] = 1.8
+projects[opigno_dashboard][version] = 1.9
 
 ;projects[opigno_dashboard][type] = module
 ;projects[opigno_dashboard][subdir] = "opigno"
@@ -135,7 +135,7 @@ projects[opigno_forum][version] = 1.8
 
 projects[opigno_group_manager][type] = module
 projects[opigno_group_manager][subdir] = "opigno"
-projects[opigno_group_manager][version] = 1.9
+projects[opigno_group_manager][version] = 1.10
 
 ;projects[opigno_group_manager][type] = module
 ;projects[opigno_group_manager][subdir] = "opigno"
@@ -148,7 +148,7 @@ projects[opigno_group_manager][version] = 1.9
 
 projects[opigno_ilt][type] = module
 projects[opigno_ilt][subdir] = "opigno"
-projects[opigno_ilt][version] = 1.7
+projects[opigno_ilt][version] = 1.8
 
 ;projects[opigno_ilt][type] = module
 ;projects[opigno_ilt][subdir] = "opigno"
@@ -161,7 +161,7 @@ projects[opigno_ilt][version] = 1.7
 
 projects[opigno_learning_path][type] = module
 projects[opigno_learning_path][subdir] = "opigno"
-projects[opigno_learning_path][version] = 1.12
+projects[opigno_learning_path][version] = 1.13
 
 ;projects[opigno_learning_path][type] = module
 ;projects[opigno_learning_path][subdir] = "opigno"
@@ -174,7 +174,7 @@ projects[opigno_learning_path][version] = 1.12
 
 projects[opigno_messaging][type] = module
 projects[opigno_messaging][subdir] = "opigno"
-projects[opigno_messaging][version] = 1.5
+projects[opigno_messaging][version] = 1.6
 
 ;projects[opigno_messaging][type] = module
 ;projects[opigno_messaging][subdir] = "opigno"
@@ -187,7 +187,7 @@ projects[opigno_messaging][version] = 1.5
 
 projects[opigno_migration][type] = module
 projects[opigno_migration][subdir] = "opigno"
-projects[opigno_migration][version] = 1.6
+projects[opigno_migration][version] = 1.7
 
 ;projects[opigno_migration][type] = module
 ;projects[opigno_migration][subdir] = "opigno"
@@ -200,7 +200,7 @@ projects[opigno_migration][version] = 1.6
 
 projects[opigno_mobile_app][type] = module
 projects[opigno_mobile_app][subdir] = "opigno"
-projects[opigno_mobile_app][version] = 1.4
+projects[opigno_mobile_app][version] = 1.5
 
 ;projects[opigno_mobile_app][type] = module
 ;projects[opigno_mobile_app][subdir] = "opigno"
@@ -213,7 +213,7 @@ projects[opigno_mobile_app][version] = 1.4
 
 projects[opigno_module][type] = module
 projects[opigno_module][subdir] = "opigno"
-projects[opigno_module][version] = 1.9
+projects[opigno_module][version] = 1.10
 
 ;projects[opigno_module][type] = module
 ;projects[opigno_module][subdir] = "opigno"
@@ -226,7 +226,7 @@ projects[opigno_module][version] = 1.9
 
 projects[opigno_moxtra][type] = module
 projects[opigno_moxtra][subdir] = "opigno"
-projects[opigno_moxtra][version] = 1.9
+projects[opigno_moxtra][version] = 1.10
 
 ;projects[opigno_moxtra][type] = module
 ;projects[opigno_moxtra][subdir] = "opigno"
@@ -239,7 +239,7 @@ projects[opigno_moxtra][version] = 1.9
 
 projects[opigno_notification][type] = module
 projects[opigno_notification][subdir] = "opigno"
-projects[opigno_notification][version] = 1.6
+projects[opigno_notification][version] = 1.7
 
 ;projects[opigno_notification][type] = module
 ;projects[opigno_notification][subdir] = "opigno"
@@ -252,7 +252,7 @@ projects[opigno_notification][version] = 1.6
 
 projects[opigno_scorm][type] = module
 projects[opigno_scorm][subdir] = "opigno"
-projects[opigno_scorm][version] = 1.8
+projects[opigno_scorm][version] = 1.9
 
 ;projects[opigno_scorm][type] = module
 ;projects[opigno_scorm][subdir] = "opigno"
@@ -265,7 +265,7 @@ projects[opigno_scorm][version] = 1.8
 
 projects[opigno_search][type] = module
 projects[opigno_search][subdir] = "opigno"
-projects[opigno_search][version] = 1.6
+projects[opigno_search][version] = 1.7
 
 ;projects[opigno_search][type] = module
 ;projects[opigno_search][subdir] = "opigno"
@@ -278,7 +278,7 @@ projects[opigno_search][version] = 1.6
 
 projects[opigno_statistics][type] = module
 projects[opigno_statistics][subdir] = "opigno"
-projects[opigno_statistics][version] = 1.8
+projects[opigno_statistics][version] = 1.9
 
 ;projects[opigno_statistics][type] = module
 ;projects[opigno_statistics][subdir] = "opigno"
@@ -304,7 +304,7 @@ projects[opigno_tincan_api][version] = 1.5
 
 projects[opigno_tour][type] = module
 projects[opigno_tour][subdir] = "opigno"
-projects[opigno_tour][version] = 1.1
+projects[opigno_tour][version] = 1.2
 
 ;projects[opigno_tour][type] = module
 ;projects[opigno_tour][subdir] = "opigno"
@@ -317,7 +317,7 @@ projects[opigno_tour][version] = 1.1
 
 projects[tft][type] = module
 projects[tft][subdir] = "opigno"
-projects[tft][version] = 1.5
+projects[tft][version] = 1.6
 
 ;projects[tft][type] = module
 ;projects[tft][subdir] = "opigno"
@@ -551,7 +551,7 @@ libraries[slick][destination] = libraries
 ; Themes ========================================
 
 projects[platon][type] = theme
-projects[platon][version] = 1.8
+projects[platon][version] = 1.9
 
 ;projects[platon][type] = theme
 ;projects[platon][version] = 1.x
