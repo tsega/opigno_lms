@@ -122,7 +122,7 @@
                 "3130242": "https://www.drupal.org/files/issues/2020-04-23/multiselect-no-schema-for-multiselect-3130242-2.patch"
             },
             "drupal/ckeditor_bgimage": {
-                "3107667": "https://www.drupal.org/files/issues/2020-05-19/ckeditor_bgimage-opigno_certificate-3107667-5.patch"
+                "3107667": "https://www.drupal.org/files/issues/2021-06-16/ckeditor_bgimage-opigno_certificate-3107667-6.patch"
             },
             "drupal/entity_print": {
                 "2865185": "https://www.drupal.org/files/issues/2020-02-24/entity_print-2865185-error_generating_document-55.patch"
