@@ -67,7 +67,7 @@
         "drupal/profile":                       "1.2",
         "drupal/ultimate_cron":                 "2.0.0-alpha4",
         "drupal/queue_ui":                      "2.2.0",
-        "drupal/admin_toolbar":                 "2.4",
+        "drupal/admin_toolbar":                 "3.0.2",
         "drupal/views_role_based_global_text":  "2.0",
         "drupal/opigno_calendar":               "1.8.0",
         "drupal/opigno_calendar_event":         "1.5.0",
