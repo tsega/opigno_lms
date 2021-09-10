@@ -112,8 +112,7 @@
         "patches": {
             "drupal/core": {
                 "#2924061: Create views plugins for date range fields": "https://www.drupal.org/files/issues/2019-04-15/2924061-14.patch",
-                "#2898635: [PP-1] bundleFieldDefinitions() are not added in EntityViewsData": "https://www.drupal.org/files/issues/2020-01-16/2898635-28.patch",
-                "Decorate config entity storage errors": "https://www.drupal.org/files/issues/2021-06-10/3218230-decorate-config-entity-storage-errors.patch"
+                "#2898635: [PP-1] bundleFieldDefinitions() are not added in EntityViewsData": "https://www.drupal.org/files/issues/2020-01-16/2898635-28.patch"
             },
             "drupal/video": {
                 "#2986682: Add source and destination module for migrate plugin": "https://www.drupal.org/files/issues/2018-07-18/2986682-2.patch"
