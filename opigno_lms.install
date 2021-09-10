@@ -229,7 +229,6 @@ function opigno_lms_update_9006() {
   ]);
   _opigno_lms_apply_delete([
     'platon.settings',
-    'block.block.lp_steps_block',
     'block.block.platon_breadcrumbs',
     'block.block.platon_content',
     'block.block.platon_local_tasks',
