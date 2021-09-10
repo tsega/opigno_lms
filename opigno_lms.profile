@@ -13,7 +13,7 @@ use Drupal\Core\Render\Markup;
  * Implements hook_preprocess_template().
  */
 function opigno_lms_preprocess_install_page(&$variables) {
-  $variables['site_version'] = '2.26.1';
+  $variables['site_version'] = '2.27';
 }
 
 /**
@@ -121,4 +121,3 @@ function opigno_lms_get_current_opigno_lms_release() {
   }
   return FALSE;
 }
-
