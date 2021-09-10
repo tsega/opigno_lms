@@ -16,6 +16,7 @@
             "exclude": [
                 "drupal/opigno_calendar",
                 "drupal/opigno_calendar_event",
+                "drupal/opigno_catalog",
                 "drupal/h5p"
             ]
         },
@@ -26,6 +27,10 @@
         {
             "type": "git",
             "url": "https://git.drupalcode.org/project/opigno_calendar_event.git"
+        },
+        {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/opigno_catalog.git"
         },
         {
             "type": "git",
