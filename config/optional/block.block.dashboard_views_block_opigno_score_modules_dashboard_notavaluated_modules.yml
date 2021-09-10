@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: dashboard_views_block_opigno_score_modules_dashboard_notavaluated_modules
-theme: platon
+theme: aristotle
 region: content
 weight: 0
 provider: null
@@ -18,7 +18,7 @@ settings:
   id: 'views_block:opigno_score_modules-dashboard_notavaluated_modules'
   label: 'Dashboard: Opigno: not evalueated modules'
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

@@ -5,9 +5,9 @@ dependencies:
     - search
     - system
   theme:
-    - platon
+    - aristotle
 id: dashboard_search_form_block
-theme: platon
+theme: aristotle
 region: content
 weight: -7
 provider: null

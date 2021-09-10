@@ -6,11 +6,11 @@ dependencies:
   module:
     - system
   theme:
-    - platon
-id: platon_main_menu
-theme: platon
+    - aristotle
+id: mainnavigation
+theme: aristotle
 region: menu
-weight: -4
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -20,4 +20,5 @@ settings:
   label_display: '0'
   level: 1
   depth: 1
+  expand_all_items: false
 visibility: {  }

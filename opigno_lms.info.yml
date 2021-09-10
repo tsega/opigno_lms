@@ -1,8 +1,8 @@
 name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
-core: 8.x
-# version: 8.x-2.26.1
+core_version_requirement: ^8 || ^9
+# version: 8.x-2.26
 distribution:
   name: "Opigno LMS"
 dependencies:
@@ -52,7 +52,6 @@ dependencies:
   - media_entity_browser
   - menu_ui
   - mimemail
-  - multiselect
   - node
   - opigno_calendar
   - opigno_calendar_event
@@ -89,7 +88,6 @@ dependencies:
   - opigno_tincan_learning_path
   - opigno_tincan_live_meeting
   - opigno_tincan_modules
-  - opigno_tour
   - opigno_video
   - options
   - page_cache
@@ -110,16 +108,16 @@ dependencies:
   - token
   - token_filter
   - toolbar
-  - tour
+  - twig_field_value
   - update
   - user
   - userprotect
   - variationcache
   - video
-  - views_role_based_global_text
   - views_templates
   - views_ui
   - forum
+  - simple_gmap
 themes:
-  - platon
   - seven
+  - aristotle

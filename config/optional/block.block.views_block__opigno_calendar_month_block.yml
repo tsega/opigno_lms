@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: views_block__opigno_calendar_month_block
-theme: platon
+theme: aristotle
 region: content
 weight: 3
 provider: null

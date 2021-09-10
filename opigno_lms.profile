@@ -13,7 +13,7 @@ use Drupal\Core\Render\Markup;
  * Implements hook_preprocess_template().
  */
 function opigno_lms_preprocess_install_page(&$variables) {
-  $variables['site_version'] = '2.26.1';
+  $variables['site_version'] = '2.26';
 }
 
 /**
@@ -26,6 +26,12 @@ function opigno_lms_install_tasks(&$install_state) {
       'display' => FALSE,
       'type' => 'normal',
       'function' => 'opigno_dashboard_blocks_update',
+    ],
+    'opigno_lms_clear_cache' => [
+      'display_name' => t('Clear cache'),
+      'display' => FALSE,
+      'type' => 'normal',
+      'function' => 'opigno_lms_clear_cache',
     ],
   ];
   return $tasks;
@@ -120,5 +126,12 @@ function opigno_lms_get_current_opigno_lms_release() {
     }
   }
   return FALSE;
+}
+
+/**
+ * Clear cache on installation.
+ */
+function opigno_lms_clear_cache() {
+  drupal_flush_all_caches();
 }
 

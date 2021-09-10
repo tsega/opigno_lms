@@ -1,12 +1,14 @@
 langcode: en
-status: false
+status: true
 dependencies:
+  module:
+    - user
   theme:
-    - platon
-id: platon_local_tasks
-theme: platon
+    - aristotle
+id: tabs
+theme: aristotle
 region: content
-weight: -2
+weight: -11
 provider: null
 plugin: local_tasks_block
 settings:
@@ -19,6 +21,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/group/*\r\n/opigno/calendar*\r\n/opigno/calendar/*"
+    pages: "/group/*\r\n/user/*/edit\r\n/user/*\r\n/opigno/calendar\r\n/opigno/calendar/*"
     negate: true
-    context_mapping: {  }

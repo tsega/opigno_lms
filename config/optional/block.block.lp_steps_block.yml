@@ -5,9 +5,9 @@ dependencies:
     - opigno_learning_path
     - system
   theme:
-    - platon
+    - aristotle
 id: lp_steps_block
-theme: platon
+theme: aristotle
 region: sidebar_first
 weight: 0
 provider: null

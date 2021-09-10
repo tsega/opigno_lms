@@ -7,12 +7,11 @@
  */
 
 use Drupal\Core\Config\FileStorage;
-use Drupal\file\Entity\File;
-use Drupal\media\Entity\MediaType;
-use Drupal\user\Entity\User;
+use Drupal\Core\Config\StorageInterface;
+use Drupal\Core\Database\Database;
 use Drupal\Core\StreamWrapper\PrivateStream;
+use Drupal\user\Entity\User;
 use Drupal\user\UserInterface;
-
 
 /**
  * Implements hook_install().
@@ -24,6 +23,7 @@ use Drupal\user\UserInterface;
  * @throws \Drupal\Core\Extension\MissingDependencyException
  */
 function opigno_lms_install() {
+  \Drupal::service('module_installer')->install(['opigno_alter_entity_autocomplete']);
   $config = \Drupal::configFactory();
 
   // Disable the user pictures on nodes.
@@ -42,9 +42,9 @@ function opigno_lms_install() {
     ->save(TRUE);
 
   // Set theme logo path.
-  $theme_path = drupal_get_path("theme", "platon");
-  $logo_path = $theme_path . "/logo.png";
-  $config->getEditable('platon.settings')
+  $theme_path = drupal_get_path("theme", "aristotle");
+  $logo_path = $theme_path . "/assets/Logo-Opigno-3-dark.svg";
+  $config->getEditable('aristotle.settings')
     ->set('logo.path', $logo_path)
     ->save(TRUE);
 
@@ -52,6 +52,10 @@ function opigno_lms_install() {
   $user = User::load(1);
   $user->addRole('administrator');
   $user->save();
+
+  // Copy user login page background image to public folder.
+  $image = file_get_contents(drupal_get_path("theme", "aristotle") . "/assets/Trient-0014.jpg");
+  file_save_data($image, 'public://Trient-0014.jpg', TRUE);
 
   // Copy user login page background image to public folder.
   $image = file_get_contents(drupal_get_path("profile", "opigno_lms") . "/images/Opigno_Image_connexion_1600-829_2.jpg");
@@ -90,9 +94,9 @@ function opigno_lms_requirements($phase) {
         'title' => 'Private Files System',
         'value' => t('Private file system path not set'),
         'severity' => REQUIREMENT_ERROR,
-        'description' => t('Your uploaded files are not fully protected because you did not set a Private File Directory. 
-                          You need to set an existing local file system path for storing private files. 
-                          It should be writable by Drupal and not accessible over the web. This must be changed in settings.php. 
+        'description' => t('Your uploaded files are not fully protected because you did not set a Private File Directory.
+                          You need to set an existing local file system path for storing private files.
+                          It should be writable by Drupal and not accessible over the web. This must be changed in settings.php.
                           More info: https://opigno.atlassian.net/wiki/spaces/OUM20/pages/743636993/Enable+private+file+system'
         ),
       ];
@@ -110,88 +114,233 @@ function opigno_lms_requirements($phase) {
 }
 
 /**
- * Implements hook_update_N().
+ * Uninstall redundant modules.
  */
-function opigno_lms_update_8001() {
-  // Install module.
-  \Drupal::service('module_installer')->install(['opigno_tour', 'opigno_alter_entity_autocomplete']);
+function opigno_lms_update_9001() {
+  _opigno_lms_update_module_disable([
+    'opigno_tour',
+    'multiselect',
+    'openapi',
+    'openapi_ui',
+    'openapi_ui_swagger',
+    'views_role_based_global_text',
+  ]);
+  _opigno_lms_apply_delete([
+    'tour.tour.views-ui',
+    'tour.tour.training_edit',
+    'tour.tour.training',
+    'tour.tour.search-api-server-form',
+    'tour.tour.search-api-server',
+    'tour.tour.search-api-index-processors',
+    'tour.tour.search-api-index-form',
+    'tour.tour.search-api-index-fields',
+    'tour.tour.search-api-index',
+    'tour.tour.locale',
+    'tour.tour.language-edit',
+    'tour.tour.language-add',
+    'tour.tour.language',
+    'tour.tour.front',
+    'tour.tour.catalogue',
+    'tour.tour.achievements',
+    'core.entity_view_mode.tour.token',
+  ]);
+
+  $schema = Database::getConnection()->schema();
+  $schema->dropTable('opigno_tour_user_routes');
 }
 
 /**
- * Implements hook_update_N().
- *
- * Updates Opigno Activities Bank (LP Interface) view.
- *
+ * Import Aristotle theme configs.
  */
-function opigno_lms_update_8002() {
-  $config_path = drupal_get_path('module', 'opigno_module')
-    . '/config/optional';
-  /* @var Drupal\Core\Config\CachedStorage $config_storage */
-  $storage = new FileStorage($config_path);
-  $config_storage = \Drupal::service('config.storage');
-  $data = $storage->read('views.view.opigno_activities_bank_lp_interface');
-  $config_storage->write('views.view.opigno_activities_bank_lp_interface', $data);
-
+function opigno_lms_update_9002() {
+  _opigno_lms_apply_update('theme', 'aristotle', 'config/optional', [
+    'aristotle.settings',
+    'block.block.opigno_admin',
+    'block.block.messages',
+  ]);
 }
 
 /**
- * Implements hook_update_N().
- *
- * Update Opigno LP Steps block visibility configuration.
- *
+ * Install opigno social.
  */
-function opigno_lms_update_8003() {
+function opigno_lms_update_9003() {
+  \Drupal::service('module_installer')->install(['opigno_social']);
+ }
+
+/**
+ * Install theme.
+ */
+function opigno_lms_update_9004() {
+  $theme = 'aristotle';
+  \Drupal::service('theme_installer')->install([$theme]);
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', $theme)
+    ->set('admin', $theme)
+    ->save();
+
+  drupal_flush_all_caches();}
+
+/**
+ * Import updated configs.
+ */
+function opigno_lms_update_9005() {
+  _opigno_lms_apply_update('profile', 'opigno_lms', 'config/install', [
+    'block.block.opigno_training_catalog_filter',
+    'aristotle.settings',
+    'block.block.mainnavigation',
+    'block.block.opigno_admin',
+    'block.block.primaryadminactions',
+    'block.block.sitebranding',
+    'block.block.tabs',
+  ]);
+
+  _opigno_lms_apply_delete(['block.block.opignoadmin']);
+
+  // Copy user login page background image to public folder.
+  $image = file_get_contents(drupal_get_path("theme", "aristotle") . "/assets/Trient-0014.jpg");
+  file_save_data($image, 'public://Trient-0014.jpg', TRUE);
+}
+
+/**
+ * Remove the platon block and deprecated dashboard.
+ */
+function opigno_lms_update_9006() {
+  try {
+    \Drupal::service('theme_installer')->uninstall(['platon']);
+  } catch (\Exception $e) {
+
+  }
+  _opigno_lms_apply_update('module', 'opigno_lms', 'config/optional', [
+    'block.block.dashboard_views_block_opigno_notifications_block_unread_dashboard',
+    'block.block.dashboard_views_block_private_message_block_dashboard',
+    'block.block.views_block__private_message_block_all',
+    'block.block.dashboard_views_block_who_s_online_who_s_online_block',
+    'block.block.dashboard_views_block_who_s_new_block_1',
+    'block.block.dashboard_views_block_opigno_score_modules_dashboard_notavaluated_modules',
+    'block.block.dashboard_views_block_opigno_group_members_block_pending',
+    'block.block.dashboard_views_block_opigno_calendar_month_block',
+    'block.block.views_block__opigno_calendar_month_block',
+    'block.block.dashboard_views_block_latest_active_trainings_block',
+    'block.block.dashboard_views_block_content_recent_block_1',
+    'block.block.dashboard_views_block_comments_recent_block_1',
+    'block.block.dashboard_calendar_legend_block',
+    'block.block.dashboard_search_form_block',
+  ]);
+  _opigno_lms_apply_delete([
+    'platon.settings',
+    'block.block.lp_steps_block',
+    'block.block.platon_breadcrumbs',
+    'block.block.platon_content',
+    'block.block.platon_local_tasks',
+    'block.block.platon_messages',
+    'block.block.platon_page_title',
+    'block.block.platon_main_menu',
+    'block.block.addclassaction',
+    'block.block.platon_footer',
+    'block.block.platon_branding',
+    'block.block.platon_local_actions',
+    'block.block.privatemessageactions',
+    'block.block.privatemessageinbox',
+    'block.block.privatemessagenotification',
+    'block.block.learningpathprogress',
+  ]);
+}
+
+/**
+ * Update dashboard settings.
+ */
+function opigno_lms_update_9007() {
+  _opigno_lms_apply_update('profile', 'opigno_lms', 'config/install', ['opigno_dashboard.settings']);
+}
+
+/**
+ * Update module configs.
+ */
+function opigno_lms_update_9008() {
+  _opigno_lms_apply_update('module', 'opigno_h5p', 'config/optional', [
+    'core.entity_view_display.opigno_activity.opigno_h5p.activity',
+    'core.entity_view_display.opigno_activity.opigno_h5p.default',
+  ]);
+  _opigno_lms_apply_update('module', 'opigno_long_answer', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_long_answer.default']);
+  _opigno_lms_apply_update('module', 'opigno_scorm_activity', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_scorm.default']);
+  _opigno_lms_apply_update('module', 'opigno_tincan_activity', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_tincan.default']);
+  _opigno_lms_apply_update('module', 'opigno_module', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_slide.default']);
+}
+
+/**
+ * Configs update helper function.
+ */
+function _opigno_lms_apply_update($type, $name, $path, $ymls) {
+  $theme_path = sprintf("%s/%s/", drupal_get_path($type, $name), $path);
   $config_factory = \Drupal::configFactory();
-  $config = $config_factory->getEditable('block.block.lp_steps_block');
-  $visibility = $config->get('visibility');
-  // Change visibility settings only if admins didn't change them.
-  if (isset($visibility['request_path']['pages'])
-    && $visibility['request_path']['pages'] == "/module/*\r\n/group/*/module/*"
-  ) {
-    $visibility['request_path']['pages'] = "/module/*/result*\r\n/group/*/module/*";
-    $config->set('visibility', $visibility);
-    $config->save(TRUE);
+  $config_storage = \Drupal::service('config.storage');
+  $configs = [];
+  foreach ($ymls as $yml) {
+    $configs[$yml] = $theme_path;
+  }
+  foreach ($configs as $config => $config_path) {
+    $source = new FileStorage($config_path);
+    $data = $source->read($config);
+    if(is_array($data)) {
+      $config_factory->getEditable($config)->setData($data)->save(TRUE);
+      $config_storage->write($config, $data);
+    }
+    else {
+      \Drupal::messenger()->addWarning(t('Incorrect data of @config', ['@config'=>$config]));
+    }
   }
 }
 
 /**
- * Update content manager permissions.
+ * Configs remove helper function.
  */
-function opigno_lms_update_8004() {
+function _opigno_lms_apply_delete($configs) {
   $config_factory = \Drupal::configFactory();
-  $config = $config_factory->getEditable('user.role.content_manager');
+  /** @var StorageInterface $config_storage */
+  $config_storage = \Drupal::service('config.storage');
+  foreach ($configs as $config) {
+    $config_factory->getEditable($config)->delete();
+    $config_storage->delete($config);
+  }
+}
 
-  // Add new permissions.
-  $config_permissions = &$config->get('permissions');
-  $issue_permissions = [
-    'message all groups',
-    'message anyone regardless of groups',
+/**
+ * Module disable helper function.
+ */
+function _opigno_lms_update_module_disable($modules) {
+  $module_data = \Drupal::config('core.extension')->get('module');
+  foreach ($modules as $item) {
+    \Drupal::database()->delete('key_value')
+      ->condition('collection', 'system.schema')
+      ->condition('name', $item)
+      ->execute();
+    unset($module_data[$item]);
+  }
+  \Drupal::configFactory()
+    ->getEditable('core.extension')
+    ->set('module', $module_data)
+    ->save();
+  \Drupal::service('cache.config')->invalidateAll();
+  foreach ($modules as $item) {
+    if (\Drupal::moduleHandler()->moduleExists($item)) {
+      \Drupal::service('module_installer')->uninstall([$item]);
+    }
+  }
+  drupal_flush_all_caches();
+}
+
+/**
+ * Update dependencies.
+ */
+function opigno_lms_update_dependencies() {
+  $dependencies['opigno_calendar'][9001] = [
+    'opigno_lms' => 9001,
+  ];
+  $dependencies['opigno_learning_path'][9001] = [
+    'opigno_catalog' => 9001,
+    'opigno_lms' => 9001,
   ];
 
-  foreach ($issue_permissions as $permission) {
-    if (!in_array($permission, $config_permissions)) {
-      $config_permissions[] = $permission;
-    }
-  }
-
-  $config->set('permissions', $config_permissions);
-  $config->save(TRUE);
-}
-
-/**
- * Remove unnecessary media type 'file'.
- */
-function opigno_lms_update_8005() {
-  try {
-    $media_type = MediaType::load('file');
-    if ($media_type) {
-      $media_type->delete();
-    }
-  }
-  catch (Exception $e) {
-    $message = t("Error removing media type 'file': ");
-    \Drupal::logger('opigno_lms')->error($message . $e->getMessage());
-    $messenger = \Drupal::messenger();
-    $messenger->addError($message . $e->getMessage());
-  }
+  return $dependencies;
 }

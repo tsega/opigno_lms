@@ -7,9 +7,9 @@ dependencies:
     - system
     - user
   theme:
-    - platon
-id: opignoadmin
-theme: platon
+    - aristotle
+id: opigno_admin
+theme: aristotle
 region: admin_opigno
 weight: 0
 provider: null
@@ -21,11 +21,11 @@ settings:
   label_display: '0'
   level: 1
   depth: 0
+  expand_all_items: false
 visibility:
   user_role:
     id: user_role
     roles:
-      authenticated: authenticated
       user_manager: user_manager
       content_manager: content_manager
       administrator: administrator

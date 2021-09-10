@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: dashboard_views_block_comments_recent_block_1
-theme: platon
+theme: aristotle
 region: content
 weight: 1
 provider: null
@@ -18,7 +18,7 @@ settings:
   id: 'views_block:comments_recent-block_1'
   label: 'Dashboard: Recent comments'
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

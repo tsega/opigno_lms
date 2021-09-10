@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: dashboard_views_block_who_s_online_who_s_online_block
-theme: platon
+theme: aristotle
 region: content
 weight: -5
 provider: null
@@ -18,7 +18,7 @@ settings:
   id: 'views_block:who_s_online-who_s_online_block'
   label: 'Dashboard: Who''s online'
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

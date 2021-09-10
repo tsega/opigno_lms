@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: dashboard_views_block_private_message_block_dashboard
-theme: platon
+theme: aristotle
 region: content
 weight: 0
 provider: null
@@ -18,7 +18,7 @@ settings:
   id: 'views_block:private_message-block_dashboard'
   label: 'Dashboard: Private Message: Dashboard - Last Threads'
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

@@ -4,21 +4,21 @@ dependencies:
   module:
     - system
   theme:
-    - platon
+    - aristotle
 id: primaryadminactions
-theme: platon
+theme: aristotle
 region: content
-weight: 2
+weight: -12
 provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Catalog Primary admin actions'
+  label: 'Primary admin actions'
   provider: core
   label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: /catalogue
-    negate: false
+    pages: "/catalogue\r\n/group/classes"
+    negate: true
     context_mapping: {  }

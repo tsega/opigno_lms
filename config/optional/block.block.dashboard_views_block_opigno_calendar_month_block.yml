@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: dashboard_views_block_opigno_calendar_month_block
-theme: platon
+theme: aristotle
 region: content
 weight: 0
 provider: null
@@ -18,7 +18,7 @@ settings:
   id: 'views_block:opigno_calendar-month_block'
   label: 'Dashboard: Opigno calendar block'
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

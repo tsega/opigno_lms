@@ -5,9 +5,9 @@ dependencies:
     - calendar
     - system
   theme:
-    - platon
+    - aristotle
 id: dashboard_calendar_legend_block
-theme: platon
+theme: aristotle
 region: content
 weight: -3
 provider: null

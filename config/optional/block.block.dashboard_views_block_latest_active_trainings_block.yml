@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - platon
+    - aristotle
 id: dashboard_views_block_latest_active_trainings_block
-theme: platon
+theme: aristotle
 region: content
 weight: -1
 provider: null
@@ -18,7 +18,7 @@ settings:
   id: 'views_block:latest_active_trainings-block'
   label: 'Dashboard: Latest active trainings'
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:
