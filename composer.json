@@ -70,7 +70,7 @@
         "drupal/twig_field_value":              "^2",
         "drupal/simple_gmap":                   "3.0.1",
         "drupal/opigno_calendar":               "dev-3.x-dev",
-        "drupal/opigno_calendar_event":         "dev-3.x-dev"
+        "drupal/opigno_calendar_event":         "dev-3.x-dev",
         "drupal/opigno_catalog":         "dev-3.x-dev",
         "drupal/opigno_certificate":         "dev-3.x-dev",
         "drupal/opigno_class":         "dev-3.x-dev",
