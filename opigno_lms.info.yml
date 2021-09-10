@@ -1,11 +1,11 @@
 name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
-core_version_requirement: ^8 || ^9
-# version: 8.x-2.26
+core_version_requirement: ^9
 distribution:
   name: "Opigno LMS"
 dependencies:
+  - views_infinite_scroll
   - better_exposed_filters
   - block
   - block_content
@@ -53,7 +53,6 @@ dependencies:
   - menu_ui
   - mimemail
   - node
-  - views_infinite_scroll
   - simple_gmap
   - twig_field_value
   - opigno_calendar
