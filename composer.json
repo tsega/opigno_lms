@@ -95,7 +95,7 @@
         "drupal/opigno_tincan_api":         "dev-3.x-dev",
         "drupal/opigno_tour":         "dev-3.x-dev",
         "drupal/tft":         "dev-3.x-dev",
-        "drupal/aristotle":         "dev-3.x-dev",
+        "drupal/aristotle":         "dev-3.x-dev"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
