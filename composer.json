@@ -93,8 +93,7 @@
         "drupal/opigno_statistics":             "1.9.0",
         "drupal/opigno_tincan_api":             "1.5.0",
         "drupal/opigno_tour":                   "1.2.0",
-        "drupal/tft":                           "1.6.0",
-        "drupal/platon":                        "1.9.0"
+        "drupal/tft":                           "1.6.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
