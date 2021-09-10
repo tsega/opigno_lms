@@ -12,33 +12,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8",
-            "exclude": [
-                "drupal/opigno_calendar",
-                "drupal/opigno_calendar_event",
-                "drupal/opigno_catalog",
-                "drupal/h5p"
-            ]
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/opigno_calendar.git"
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/opigno_calendar_event.git"
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/opigno_catalog.git"
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/opigno_certificate.git"
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/h5p-3150110.git"
+            "url": "https://packages.drupal.org/8"
         }
     ],
     "require": {
