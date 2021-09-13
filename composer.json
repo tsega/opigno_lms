@@ -74,7 +74,7 @@
         "drupal/opigno_certificate":            "3.0.0-beta1",
         "drupal/opigno_class":                  "3.0.0-beta1",
         "drupal/opigno_commerce":               "3.0.0-beta1",
-        "drupal/opigno_course":                 "3.0.0-beta1",
+        "drupal/opigno_course":                 "dev-3.x-dev",
         "drupal/opigno_cron":                   "3.0.0-beta1",
         "drupal/opigno_dashboard":              "3.0.0-beta1",
         "drupal/opigno_forum":                  "3.0.0-beta1",
