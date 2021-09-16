@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "drupal/core":                          "8.9.18",
+        "drupal/core":                          "8.9.19",
         "webflo/drupal-finder":                 "^1.0.0",
         "webmozart/path-util":                  "^2.3",
         "symfony/psr-http-message-bridge":      "^1.0",
@@ -38,7 +38,7 @@
         "drupal/popup_field_group":             "1.6",
         "drupal/video":                         "1.4",
         "drupal/embed":                         "1.4",
-        "drupal/entity_embed":                  "1.1",
+        "drupal/entity_embed":                  "1.2",
         "drupal/entity_browser":                "1.10",
         "drupal/ctools":                        "3.7",
         "drupal/entity_reference_revisions":    "1.9",

@@ -383,7 +383,7 @@ projects[entity_browser][version] = 1.10
 projects[entity_browser][subdir] = contrib
 
 projects[entity_embed][type] = module
-projects[entity_embed][version] = 1.1
+projects[entity_embed][version] = 1.2
 projects[entity_embed][subdir] = contrib
 
 projects[entity_print][type] = module
