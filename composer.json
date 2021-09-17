@@ -112,6 +112,11 @@
             "web/themes/contrib/{$name}": 	["type:drupal-theme"],
             "drush/Commands/{$name}": 		["type:drupal-drush"]
         },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
         "patches": {
             "drupal/core": {
                 "#2924061: Create views plugins for date range fields": "https://www.drupal.org/files/issues/2019-04-15/2924061-14.patch",
