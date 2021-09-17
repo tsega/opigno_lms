@@ -48,6 +48,11 @@ function opigno_lms_install() {
     ->set('logo.path', $logo_path)
     ->save(TRUE);
 
+  $logo_second = $theme_path . "/assets/Logo-Opigno-3-dark.svg";
+  $config->getEditable('aristotle.settings')
+    ->set('logo_path2', $logo_second)
+    ->save(TRUE);
+
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
   $user->addRole('administrator');
