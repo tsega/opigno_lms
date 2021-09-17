@@ -43,7 +43,7 @@ function opigno_lms_install() {
 
   // Set theme logo path.
   $theme_path = drupal_get_path("theme", "aristotle");
-  $logo_path = $theme_path . "/assets/Logo-Opigno-3-dark.svg";
+  $logo_path = $theme_path . "/assets/Logo-Opigno-white.svg";
   $config->getEditable('aristotle.settings')
     ->set('logo.path', $logo_path)
     ->save(TRUE);
@@ -244,6 +244,15 @@ function opigno_lms_update_9006() {
     'block.block.privatemessagenotification',
     'block.block.learningpathprogress',
   ]);
+
+  $theme_data = \Drupal::config('core.extension')->get('theme');
+  unset($theme_data['platon']);
+  \Drupal::configFactory()
+    ->getEditable('core.extension')
+    ->set('theme', $theme_data)
+    ->save();
+
+  drupal_flush_all_caches();
 }
 
 /**
@@ -265,6 +274,24 @@ function opigno_lms_update_9008() {
   _opigno_lms_apply_update('module', 'opigno_scorm_activity', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_scorm.default']);
   _opigno_lms_apply_update('module', 'opigno_tincan_activity', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_tincan.default']);
   _opigno_lms_apply_update('module', 'opigno_module', 'config/optional', ['core.entity_view_display.opigno_activity.opigno_slide.default']);
+}
+
+/**
+ * Update theme logo.
+ */
+function opigno_lms_update_9009() {
+  _opigno_lms_apply_update('profile', 'opigno_lms', 'config/install', ['aristotle.settings']);
+}
+
+/**
+ * Fix the last update number for opigno_certificate module.
+ */
+function opigno_lms_update_9010() {
+  drupal_set_installed_schema_version('opigno_certificate', 8025);
+  if ((int) drupal_get_installed_schema_version('opigno_learning_path') > 9005) {
+    drupal_set_installed_schema_version('opigno_learning_path', 9005);
+  }
+  _opigno_lms_apply_update('module', 'opigno_certificate', 'config/install', ['core.date_format.certificate_date']);
 }
 
 /**
