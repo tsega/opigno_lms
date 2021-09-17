@@ -17,7 +17,6 @@
     ],
     "require": {
         "drupal/core-recommended":              "9.2.*",
-        "drupal/core-composer-scaffold":        "9.2.*",
         "dompdf/dompdf":                        "0.8.5",
         "rusticisoftware/tincan":               "1.1.1",
         "drupal/calendar":                      "1.0-alpha4",
@@ -111,11 +110,6 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": 	["type:drupal-theme"],
             "drush/Commands/{$name}": 		["type:drupal-drush"]
-        },
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            }
         },
         "patches": {
             "drupal/core": {
