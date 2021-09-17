@@ -17,6 +17,7 @@
     ],
     "require": {
         "drupal/core-recommended":              "9.2.6",
+        "drupal/core-composer-scaffold":        "9.2.6",
         "dompdf/dompdf":                        "0.8.5",
         "rusticisoftware/tincan":               "1.1.1",
         "drupal/calendar":                      "1.0-alpha4",
