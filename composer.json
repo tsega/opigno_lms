@@ -22,7 +22,7 @@
         "symfony/psr-http-message-bridge":      "^1.0",
         "dompdf/dompdf":                        "0.8.5",
         "rusticisoftware/tincan":               "1.1.1",
-        "drupal/commerce":                      "2.20",
+        "drupal/commerce":                      "2.27",
         "drupal/better_exposed_filters":        "4.0.0-beta4",
         "drupal/ckeditor_bgimage":              "1.1",
         "drupal/config_rewrite":                "1.4",
