@@ -19,6 +19,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/catalogue\r\n/group/classes"
+    pages: /catalogue
     negate: true
     context_mapping: {  }

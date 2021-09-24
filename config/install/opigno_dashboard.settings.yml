@@ -215,9 +215,6 @@ blocks:
   private_message_actions_block:
     available: 0
     mandatory: 0
-  search_form_block:
-    available: 0
-    mandatory: 0
   shortcuts:
     available: 0
     mandatory: 0
