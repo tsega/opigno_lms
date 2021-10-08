@@ -91,14 +91,15 @@ function opigno_lms_check_opigno_lms_updates() {
   // Get all available updates.
   $available = update_get_available();
 
-  if (isset($available['opigno_lms'])) {
-    $all_releases = array_keys($available['opigno_lms']['releases']);
-    $last_release = $all_releases[0];
-    $current_release = opigno_lms_get_current_opigno_lms_release();
-    $has_updates = ($last_release != $current_release);
-
-    return $has_updates;
+  if (!isset($available['opigno_lms'])) {
+    return FALSE;
   }
+
+  $all_releases = array_keys($available['opigno_lms']['releases']);
+  $last_release = $all_releases[0];
+  $current_release = opigno_lms_get_current_opigno_lms_release();
+
+  return $last_release !== $current_release;
 }
 
 /**
@@ -111,21 +112,13 @@ function opigno_lms_check_opigno_lms_updates() {
  */
 function opigno_lms_get_current_opigno_lms_release() {
   $profile = \Drupal::installProfile();
-  if ($profile != 'opigno_lms') {
+  if ($profile !== 'opigno_lms') {
     return FALSE;
-  };
-  $info = \Drupal::service('extension.list.module')->getExtensionInfo($profile);
-  if (!empty($info) && isset($info['version'])) {
-    if (!isset($info['version'])) {
-      \Drupal::logger('opigno_learning_path')
-        ->notice(t('Opigno LMS version is undefined!'));
-      return FALSE;
-    }
-    else {
-      return $info['version'];
-    }
   }
-  return FALSE;
+
+  $info = \Drupal::service('extension.list.module')->getExtensionInfo($profile);
+
+  return $info['version'] ?? FALSE;
 }
 
 /**
