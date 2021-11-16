@@ -28,7 +28,7 @@
         "drupal/config_rewrite":                "1.4",
         "drupal/entity":                        "1.2",
         "drupal/field_group":                   "3.2",
-        "drupal/h5p":                           "dev-3150110-drupal-9-readyness",
+        "drupal/h5p":                           "2.0.0-alpha1",
         "drupal/token":                         "1.9",
         "drupal/token_filter":                  "1.2",
         "drupal/views_templates":               "1.1",
