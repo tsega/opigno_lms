@@ -2,10 +2,11 @@ name: Opigno LMS
 type: profile
 description: 'Install Opigno with commonly used features pre-configured.'
 core_version_requirement: ^9
-version: '3.0.0'
+version: '3.0.2'
 distribution:
   name: "Opigno LMS"
 dependencies:
+  - views_infinite_scroll
   - better_exposed_filters
   - block
   - block_content
@@ -23,7 +24,6 @@ dependencies:
   - ctools
   - datetime
   - datetime_range
-  - dblog
   - dropzonejs
   - dynamic_page_cache
   - editor
@@ -53,6 +53,8 @@ dependencies:
   - menu_ui
   - mimemail
   - node
+  - simple_gmap
+  - twig_field_value
   - opigno_calendar
   - opigno_calendar_event
   - opigno_calendar_event_group
@@ -108,7 +110,6 @@ dependencies:
   - token
   - token_filter
   - toolbar
-  - twig_field_value
   - update
   - user
   - userprotect
@@ -117,7 +118,6 @@ dependencies:
   - views_templates
   - views_ui
   - forum
-  - simple_gmap
 themes:
   - seven
   - aristotle

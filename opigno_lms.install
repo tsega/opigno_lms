@@ -9,6 +9,7 @@
 use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Database\Database;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\StreamWrapper\PrivateStream;
 use Drupal\user\Entity\User;
 use Drupal\user\UserInterface;
@@ -23,7 +24,10 @@ use Drupal\user\UserInterface;
  * @throws \Drupal\Core\Extension\MissingDependencyException
  */
 function opigno_lms_install() {
-  \Drupal::service('module_installer')->install(['opigno_alter_entity_autocomplete']);
+  \Drupal::service('module_installer')->install([
+    'dblog',
+    'opigno_alter_entity_autocomplete'
+  ]);
   $config = \Drupal::configFactory();
 
   // Disable the user pictures on nodes.
@@ -59,8 +63,8 @@ function opigno_lms_install() {
   $user->save();
 
   // Copy user login page background image to public folder.
-  $image = file_get_contents(drupal_get_path("theme", "aristotle") . "/assets/Trient-0014.jpg");
-  file_save_data($image, 'public://Trient-0014.jpg', TRUE);
+  $image = file_get_contents(drupal_get_path("theme", "aristotle") . "/assets/Opigno-login-image.jpg");
+  file_save_data($image, 'public://Opigno-login-image.jpg', FileSystemInterface::EXISTS_REPLACE);
 
   // Copy user login page background image to public folder.
   $image = file_get_contents(drupal_get_path("profile", "opigno_lms") . "/images/Opigno_Image_connexion_1600-829_2.jpg");
@@ -313,6 +317,57 @@ function opigno_lms_update_9011() {
  */
 function opigno_lms_update_9012() {
   _opigno_lms_apply_update('profile', 'opigno_lms', 'config/install', ['block.block.primaryadminactions']);
+}
+
+/**
+ * Default the footer blocks for aristotle theme.
+ */
+function opigno_lms_update_9013() {
+  _opigno_lms_apply_update('module', 'opigno_lms', 'config/optional', [
+    'block.block.footer',
+    'block.block.sitebranding_2',
+  ]);
+  drupal_flush_all_caches();
+}
+
+/**
+ * Update the login image.
+ */
+function opigno_lms_update_9014() {
+  // Update the default login image if it wasn't overridden.
+  $settings = theme_get_setting('aristotle_home_page_settings', 'aristotle');
+  $slides = $settings['aristotle_home_page_slides'];
+  if (!$slides) {
+    return;
+  }
+
+  foreach ($slides as &$slide) {
+    $path = $slide['aristotle_home_page_image_path'] ?? '';
+    if ($path !== 'Trient-0014.jpg') {
+      continue;
+    }
+
+    // Copy user login page background image to public folder.
+    $image = file_get_contents(drupal_get_path('theme', 'aristotle') . '/assets/Opigno-login-image.jpg');
+    file_save_data($image, 'public://Opigno-login-image.jpg', FileSystemInterface::EXISTS_REPLACE);
+
+    // Update the config.
+    $slide['aristotle_home_page_image_path'] = 'Opigno-login-image.jpg';
+    \Drupal::configFactory()->getEditable('aristotle.settings')
+      ->set('aristotle_home_page_settings.aristotle_home_page_slides', $slides)
+      ->save();
+    break;
+  }
+}
+
+/**
+ * Install a css editor module.
+ */
+function opigno_lms_update_9015() {
+  // Module replaces a previous functionality with aristotle_css text field.
+  if (!\Drupal::moduleHandler()->moduleExists('css_editor')) {
+    \Drupal::service('module_installer')->install(['css_editor']);
+  }
 }
 
 /**

@@ -2,7 +2,7 @@ aristotle_home_page_settings:
   aristotle_use_home_page_markup: 1
   aristotle_home_page_slides:
     1:
-      aristotle_home_page_image_path: Trient-0014.jpg
+      aristotle_home_page_image_path: Opigno-login-image.jpg
       aristotle_home_page_image_upload: {  }
     actions: {  }
 aristotle_menu_source: main
@@ -22,6 +22,4 @@ aristotle_use_header_background: 0
 aristotle_header_image_path: ''
 aristotle_header_image_upload: {  }
 mobile_app_premium_logo: 0
-aristotle_css_override_content: ''
-aristotle_css_override_fid: null
 browser_sync: 0
