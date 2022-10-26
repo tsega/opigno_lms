@@ -118,7 +118,7 @@
                 "#3143747: Avoid error on installation": "https://www.drupal.org/files/issues/2020-05-29/config_rewrite-avoid-error-on-installation-3143747.patch"
             },
             "drupal/search_api": {
-                "#3110652-12: Highlight processor causes theme to think user is anonymous": "https://www.drupal.org/files/issues/2022-10-25/highlight_processor_causes_theme_to_think_user_is_anonymous_3110652_12.patch"
+                "#3110652-12-1: Highlight processor causes theme to think user is anonymous": "https://www.drupal.org/files/issues/2022-10-26/highlight_processor_causes_theme_to_think_user_is_anonymous_3110652_12.patch"
             },
             "drupal/private_message": {
                 "Missing text format: basic_html": "https://www.drupal.org/files/issues/2020-03-23/basic_html_to_plain_text-3121606-2.patch",
