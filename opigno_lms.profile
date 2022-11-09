@@ -13,7 +13,7 @@ use Drupal\Core\Render\Markup;
  * Implements hook_preprocess_template().
  */
 function opigno_lms_preprocess_install_page(&$variables) {
-  $variables['site_version'] = '3.0.7';
+  $variables['site_version'] = '3.0.9';
 }
 
 /**
@@ -47,9 +47,9 @@ function opigno_lms_form_install_configure_form_alter(&$form, FormStateInterface
 
 
   // Check if Tincan PHP library is installed.
-  $has_library = class_exists('TinCan\Statement');
+  $has_library = class_exists('TinCan\Version');
   if (!$has_library) {
-    $messenger->addWarning(Markup::create("Please install the TinCanPHP library using Composer, with the command: <em>composer require rusticisoftware/tincan:@stable</em>"));
+    $messenger->addWarning(Markup::create('Please install the TinCanPHP library using Composer, with the command: <em>"composer require opigno/tincan:^1.1</em>"'));
   }
   else {
     // Check if the LRS settings are set.
