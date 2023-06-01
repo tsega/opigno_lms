@@ -1,7 +1,7 @@
 name: Opigno LMS
 type: profile
 description: "Install Opigno with commonly used features pre-configured."
-version: "3.0.9"
+version: "OPIGNO_LMS_VERSION"
 core_version_requirement: ^9 || ^10
 distribution:
   name: "Opigno LMS"
@@ -97,6 +97,7 @@ dependencies:
   - pdf
   - popup_field_group
   - private_message
+  - queue_mail
   - quickedit
   - rdf
   - role_delegation

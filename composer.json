@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "authors": [],
     "require": {
-        "drupal/core-recommended": "~9.4.0",
+        "drupal/core-recommended": "~9.5.0",
         "dompdf/dompdf": "~2.0.0",
         "opigno/tincan": "^1.1",
         "drupal/calendar": "^1.0@alpha",
@@ -16,6 +16,7 @@
         "drupal/ckeditor_bgimage": "2.0.0",
         "drupal/config_rewrite": "~1.4.0",
         "drupal/entity": "^1.3",
+        "drupal/extra_field": "^2.3",
         "drupal/field_group": "~3.2.0",
         "drupal/h5p": "^2.0@alpha",
         "drupal/token": "^1.10",
@@ -59,6 +60,8 @@
         "drupal/simple_gmap": "~3.0.1",
         "drupal/honeypot": "^2.0",
         "drupal/css_editor": "^2.0",
+        "drupal/color": "2.x-dev",
+        "drupal/queue_mail": "^1.4",
         "opis/json-schema": "^2.2",
         "drupal/opigno_calendar": "^3.0",
         "drupal/opigno_calendar_event": "^3.0",
@@ -94,7 +97,7 @@
                 "#2924061: Create views plugins for date range fields": "https://www.drupal.org/files/issues/2019-04-15/2924061-14.patch",
                 "#2898635: [PP-1] bundleFieldDefinitions() are not added in EntityViewsData": "https://www.drupal.org/files/issues/2020-01-16/2898635-28.patch",
                 "#3218230: Decorate config entity storage errors": "https://www.drupal.org/files/issues/2022-01-10/3218230-decorate-config-entity-storage-errors-7.patch",
-                "#2995825": "https://www.drupal.org/files/issues/2022-01-31/2995825-58-for-9.3.3_0.patch"
+                "#3302838: Querying with NULL values results in warning mb_strtolower(): Passing null to parameter is deprecated": "https://www.drupal.org/files/issues/2022-08-23/3302838-13.patch"
             },
             "drupal/video": {
                 "#2986682: Add source and destination module for migrate plugin": "https://www.drupal.org/files/issues/2018-07-18/2986682-2.patch"
@@ -135,6 +138,14 @@
             },
             "drupal/better_exposed_filters": {
                 "Textfield in auto-submit filter with Ajax should retain focus submitted": "https://www.drupal.org/files/issues/2020-09-16/3103626-12.patch"
+            },
+            "drupal/h5p": {
+                "H5P saving missing title not saving changes": "https://www.drupal.org/files/issues/2022-05-19/h5p-3281356-2.patch",
+                "3260094 - PHP 8.0 deprecated syntax warnings for h5p-editor": "https://www.drupal.org/files/issues/2023-02-06/h5p-php8-deprecation-warnings-3260094-27.patch",
+                "#3295255: H5P widget settings unclickable checkboxes": "https://www.drupal.org/files/issues/2022-07-11/3295255_2.patch"
+            },
+            "drupal/color": {
+                "#2995825 - Color css files are not regenerated when deploying through configuration management": "https://www.drupal.org/files/issues/2022-06-21/2995825-68.patch"
             }
         }
     }
