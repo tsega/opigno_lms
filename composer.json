@@ -18,7 +18,7 @@
     "require": {
         "drupal/core-recommended":              "9.2.*",
         "dompdf/dompdf":                        "2.0.3",
-        "rusticisoftware/tincan":               "1.1.1",
+        "rusticisoftware/tincan":               "dev-master",
         "drupal/calendar":                      "1.0-alpha4",
         "drupal/media_entity_browser":          "2.0-alpha3",
         "drupal/pdf":                           "1.x-dev#1e33fbf",
