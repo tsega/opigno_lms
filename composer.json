@@ -32,7 +32,7 @@
         "drupal/token":                         "1.9",
         "drupal/token_filter":                  "1.2",
         "drupal/views_templates":               "1.1",
-        "drupal/entity_print":                  "2.2",
+        "drupal/entity_print":                  "2.7",
         "drupal/group":                         "1.2",
         "drupal/popup_field_group":             "1.6",
         "drupal/video":                         "1.5.0-alpha1",
