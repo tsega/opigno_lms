@@ -56,7 +56,7 @@
         "drupal/message_notify":                "1.2",
         "drupal/migrate_tools":                 "5.0",
         "drupal/migrate_plus":                  "5.1",
-        "mozilla/pdf.js":                       "dev-master",
+        "mozilla/pdf.js":                       "2.4.456",
         "furf/jquery-ui-touch-punch":           "master",
         "drupal/jwt":                           "1.0-rc1",
         "drupal/restui":                        "1.20.0",
